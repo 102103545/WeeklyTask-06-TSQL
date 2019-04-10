@@ -12,8 +12,9 @@ Post-Deployment Script Template
 if '$(LoadTestData)'='True'
 Begin
 
+DELETE From Log;
 Delete From Account;
-Delete From Log;
+
 
 INSERT INTO Account (AcctNo,Fname,Lname,CreditLimit,Balance) Values
 (1,'tony','pepperoni',10,100),
